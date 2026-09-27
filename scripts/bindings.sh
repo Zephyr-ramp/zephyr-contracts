@@ -7,7 +7,8 @@
 # If deployments/testnet.json exists, the bindings are generated from that
 # deployed contract and its ID is baked into the `networks.testnet` export.
 # Otherwise (or with LOCAL_ONLY=1) they come from the local wasm, and callers
-# pass `contractId` themselves.
+# pass `contractId` themselves. STELLAR_SDK_RANGE overrides the SDK dependency
+# (default ^17.1.0, matching zephyr-backend and zephyr-frontend).
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -38,6 +39,8 @@ const [file, name, version] = process.argv.slice(2);
 const pkg = JSON.parse(fs.readFileSync(file, "utf8"));
 pkg.name = name;
 pkg.version = version;
+// Match the SDK used by zephyr-backend and zephyr-frontend, so apps bundle one copy.
+pkg.dependencies["@stellar/stellar-sdk"] = process.env.STELLAR_SDK_RANGE || "^17.1.0";
 pkg.description = "TypeScript client for the Zephyr withdrawal escrow Soroban contract";
 pkg.license = "Apache-2.0";
 pkg.repository = { type: "git", url: "https://github.com/zephyr-ramp/zephyr-contracts.git", directory: "bindings" };
