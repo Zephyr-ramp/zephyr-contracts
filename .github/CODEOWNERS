@@ -1,0 +1,4 @@
+# Contract changes need a maintainer review.
+*                    @zephyr-ramp/maintainers
+/contracts/          @zephyr-ramp/contract-reviewers
+/scripts/            @zephyr-ramp/maintainers
