@@ -1,0 +1,8 @@
+/target/
+**/test_snapshots/
+bindings/node_modules/
+.stellar/
+.env
+.env.*
+*.log
+.DS_Store
