@@ -214,6 +214,8 @@ npm install @zephyr-ramp/escrow-client
 npm install ../zephyr-contracts/bindings
 ```
 
+zephyr-backend and zephyr-frontend vendor a packed tarball (`vendor/zephyr-ramp-escrow-client-*.tgz`), so their installs work offline. After changing the contract interface, run `npm run bindings:update` in each app. The package depends on `@stellar/stellar-sdk` ^17.1.0 (set in `scripts/bindings.sh`) so the apps bundle a single SDK.
+
 ```ts
 import { Client, networks } from "@zephyr-ramp/escrow-client";
 
