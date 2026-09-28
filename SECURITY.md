@@ -11,7 +11,7 @@ The escrow contract holds user funds. We take reports seriously and will work wi
 Report privately through either channel:
 
 1. **GitHub Security Advisories (preferred):** [open a private advisory](https://github.com/zephyr-ramp/zephyr-contracts/security/advisories/new). Only maintainers can see it.
-2. **Email:** the security contact listed on the [zephyr-ramp organization profile](https://github.com/zephyr-ramp).
+2. **Email:** [niheanyi404@gmail.com](mailto:niheanyi404@gmail.com), with a subject starting `[SECURITY]`.
 
 Please include:
 

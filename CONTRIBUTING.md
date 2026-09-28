@@ -79,6 +79,15 @@ If you change a function signature, a `#[contracttype]`, an event or an error co
 
 Tests live in `contracts/escrow/src/test/`. Start from the `Setup` fixture in `test/mod.rs`: it registers a USDC-like Stellar Asset Contract, funds a user, and initialises the escrow.
 
+## Maintainers
+
+| Maintainer | GitHub |
+|---|---|
+| N-thnI | [@N-thnI](https://github.com/N-thnI) |
+| nixx | [@N-i-xx](https://github.com/N-i-xx) |
+
+Maintainers assign issues, review PRs (see `.github/CODEOWNERS`) and handle security and conduct reports sent to [niheanyi404@gmail.com](mailto:niheanyi404@gmail.com).
+
 ## Security
 
 Never report vulnerabilities in public issues. See [SECURITY.md](SECURITY.md).
